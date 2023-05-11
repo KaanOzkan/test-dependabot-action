@@ -18,7 +18,12 @@ jobs:
       run: |
           output=$(git status)
           echo $output
+
     - name: Echo git log
       run: |
           output=$(git log -1 HEAD)
           echo $output
+
+    - name: Try to checkout
+      run: |
+          git checkout ${{ github.head_ref }}
