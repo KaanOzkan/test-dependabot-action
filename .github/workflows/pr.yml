@@ -1,0 +1,24 @@
+name: Workflow
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  job:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Echo git status
+      run: |
+          output=$(git status)
+          echo $output
+    - name: Echo git log
+      run: |
+          output=$(git log -1 HEAD)
+          echo $output
