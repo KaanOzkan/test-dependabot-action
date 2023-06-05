@@ -6,8 +6,6 @@ on:
       - opened
     branches:
       - 'dependabot/**'
-    paths:
-      - 'Gemfile.lock'
 
 permissions:
   contents: write
