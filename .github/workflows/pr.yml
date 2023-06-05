@@ -1,9 +1,10 @@
 name: Workflow
 
 on:
-  pull_request:
-    branches:
-      - 'releases'
+  types:
+    - opened
+  paths:
+    - 'Gemfile.lock'
 
 permissions:
   contents: write
