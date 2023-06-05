@@ -2,7 +2,12 @@ name: Workflow
 
 on:
   pull_request:
-  workflow_dispatch:
+    types:
+      - opened
+    branches:
+      - dependabot/**
+    paths:
+      - 'Gemfile.lock'
 
 permissions:
   contents: write
