@@ -20,6 +20,7 @@ GEM
       sorbet-static (= 0.5.10904)
     sorbet-runtime (0.5.10904)
     sorbet-static (0.5.10904-universal-darwin-21)
+    sorbet-static (0.5.10904-x86_64-linux)
     sorbet-static-and-runtime (0.5.10904)
       sorbet (= 0.5.10904)
       sorbet-runtime (= 0.5.10904)
@@ -31,7 +32,7 @@ GEM
       thor (>= 0.19.2)
     syntax_tree (6.1.1)
       prettier_print (>= 1.2.0)
-    tapioca (0.11.5)
+    tapioca (0.11.7)
       bundler (>= 2.2.25)
       netrc (>= 0.11.0)
       parallel (>= 1.21.0)
@@ -51,6 +52,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   rbi
