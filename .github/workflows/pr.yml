@@ -3,6 +3,7 @@ name: Workflow
 on:
   pull_request:
     types:
+      - opened
       - synchronize
     paths:
       - 'Gemfile.lock'
