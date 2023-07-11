@@ -11,15 +11,16 @@ GEM
       racc
     prettier_print (1.2.1)
     racc (1.7.1)
-    rbi (0.0.16)
+    rbi (0.0.17)
       ast
-      parser (>= 2.6.4.0)
+      parser (>= 3.0.0)
       sorbet-runtime (>= 0.5.9204)
-      unparser
+      unparser (>= 0.5.6)
     sorbet (0.5.10904)
       sorbet-static (= 0.5.10904)
     sorbet-runtime (0.5.10904)
     sorbet-static (0.5.10904-universal-darwin-21)
+    sorbet-static (0.5.10904-x86_64-linux)
     sorbet-static-and-runtime (0.5.10904)
       sorbet (= 0.5.10904)
       sorbet-runtime (= 0.5.10904)
@@ -51,6 +52,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   rbi
