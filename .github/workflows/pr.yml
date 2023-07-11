@@ -5,15 +5,20 @@ on:
     types: [opened, synchronize]
     paths:
       - 'Gemfile.lock'
+  workflow_dispatch:
 
 permissions:
   contents: write
   pull-requests: write
 
+# Only allow one run of this per branch. Cancel any existing ones when re-triggered.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref }}
+  cancel-in-progress: true
+
 jobs:
   job:
     runs-on: ubuntu-latest
-    if: ${{ github.triggering_actor == 'dependabot[bot]' }}
     steps:
     - uses: actions/checkout@v3
       with:
@@ -33,10 +38,7 @@ jobs:
       run: |
           git checkout ${{ github.head_ref }}
 
-  job2:
-    runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' }}
-    steps:
-    - name: Echo
+    - name: sleep
       run: |
-          echo "Actor"
+          echo ${{ github.workflow }}-${{ github.head_ref }}
+          sleep 600
