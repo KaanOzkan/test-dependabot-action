@@ -47,3 +47,4 @@ jobs:
         if: ${{ failure() && steps.setup.conclusion == 'failure' }}
         run: |
           echo "Failed during setup"
+          exit 1
