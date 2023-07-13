@@ -7,4 +7,4 @@ jobs:
   update:
     uses: KaanOzkan/test-dependabot-action/.github/workflows/reusable.yml@main
     with:
-      runner: ubuntu-latest
+      runner: ubuntu-latest-incorrect
