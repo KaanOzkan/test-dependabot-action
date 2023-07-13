@@ -46,5 +46,8 @@ jobs:
       - name: Failure message
         if: ${{ failure() && steps.setup.conclusion == 'failure' }}
         run: |
-          echo "Failed during setup"
+          echo "A failure during the Ruby setup step could indicate that the permissions\n" \
+          "for this repo are not configured correctly.\n\n" \
+          "If you're using GitHub as a source for a gem in your Gemfile, please read \n" \
+          "this section of the Sorbet vault docs for guidance:\n"
           exit 1
