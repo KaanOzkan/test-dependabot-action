@@ -11,7 +11,7 @@ on:
 
 jobs:
   reusable:
-    runs-on: ${{ github.event.inputs.runner }}
+    runs-on: ${{ inputs.runner }}
     steps:
       - name: Hello world
         run: echo "Hello world"
