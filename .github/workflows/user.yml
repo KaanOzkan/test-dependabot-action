@@ -1,0 +1,10 @@
+name: User
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update:
+    uses: KaanOzkan/test-dependabot-action/.github/workflows/reusable.yml@e01d066887e95a7e8692ca784480acbdf8002d9b
+    with:
+      runner: ubuntu-latest
