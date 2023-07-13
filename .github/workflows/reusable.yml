@@ -1,0 +1,17 @@
+name: Reusable
+
+on:
+  workflow_call:
+    inputs:
+      runner:
+        description: Specify the runner
+        type: string
+        default: 'self-hosted'
+        required: false
+
+jobs:
+  reusable:
+    runs-on: ${{ github.event.inputs.runner }}
+    steps:
+      - name: Hello world
+        run: echo "Hello world"
