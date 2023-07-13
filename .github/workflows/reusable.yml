@@ -6,7 +6,7 @@ on:
       runner:
         description: Specify the runner
         type: string
-        default: 'self-hosted'
+        default: ubuntu-latest
         required: false
 
 jobs:
